@@ -1,26 +1,37 @@
 # inverse_design
 
-TODO(b/251152449): Add a description for your new project, explain what is
-being released here, etc... Additional, the following sections are normally
-expected for all releases. Feel free to add additional sections if appropriate
-for your project.
+Code and parameters to accompany the NeurIPS 2022 paper
+**Inverse Design for Fluid-Structure Interactions using Graph Network
+Simulators** ([arXiv](https://arxiv.org/abs/2202.00728))<br/>
+_Kelsey R. Allen*, Tatiana Lopez-Guevara*, Kimberly Stachenfeld*,
+Alvaro Sanchez-Gonzalez, Peter Battaglia, Jessica Hamrick, Tobias Pfaff_
 
-## Installation
-
-Write instructions for how the user should install your code. The instructions
-should ideally be valid when copy-pasted. You can combine this with the Usage
-section if there's no separate installation step.
+The code here provides an implementation of the Encode-Process-Decode
+graph network architecture in jax, model weights for this architecture trained
+on the 3D WaterCourse environment, and an example of performing gradient-based
+optimization in order to optimize a landscape to reroute water.
 
 ## Usage
 
-Write example usage of your code. The instructions should ideally be valid when
-copy-pasted, and will be used by your technical reviewer to verify that your
-package functions correctly.
+Open ```demo_design_optimization.ipynb``` and run all cells.
 
 ## Citing this work
 
-Add citation details here, usually a pastable BibTeX snippet.
-
+If you use this work, please cite the following paper
+```
+@misc{inversedesign_2022,
+  title = {Inverse Design for Fluid-Structure Interactions using Graph Network Simulators},
+  author = {Kelsey R. Allen and
+               Tatiana Lopez{-}Guevara and
+               Kimberly L. Stachenfeld and
+               Alvaro Sanchez{-}Gonzalez and
+               Peter W. Battaglia and
+               Jessica B. Hamrick and
+               Tobias Pfaff},
+  journal = {Neural Information Processing Systems},
+  year = {2022},
+}
+```
 ## License and disclaimer
 
 Copyright 2022 DeepMind Technologies Limited
