@@ -1,4 +1,4 @@
-# inverse_design
+# Inverse Design for fluid-structure interactions using graph network simulators
 
 Code and parameters to accompany the NeurIPS 2022 paper
 **Inverse Design for Fluid-Structure Interactions using Graph Network
@@ -13,7 +13,42 @@ optimization in order to optimize a landscape to reroute water.
 
 ## Usage
 
-Open ```demo_design_optimization.ipynb``` and run all cells.
+### in a google colab
+Open the [google colab](https://colab.research.google.com/github/deepmind/inverse_design/blob/master/demo_design_optimization.ipynb) and run all cells.
+
+### with jupyter notebook / locally
+To install the necessary requirements (run these commands from the directory
+that you wish to clone `inverse_design` into):
+
+```shell
+git clone https://github.com/deepmind/inverse_design.git
+python3 -m venv id_venv
+source id_venv/bin/activate
+pip install --upgrade pip
+pip install -r ./inverse_design/requirements.txt
+```
+
+Additionally install jupyter notebook if not already installed with
+`pip install notebook`
+
+Finally, make a new directory within the `inverse_design` repository and move
+files there:
+```shell
+cd inverse_design
+mkdir inverse_design
+mv src/ inverse_design/
+```
+
+Download the dataset and model weights from google cloud:
+```shell
+wget -O ./gns_params.pickle https://storage.googleapis.com/
+dm_inverse_design_watercourse/gns_params.pickle
+wget -O ./init_sequence.pickle https://storage.googleapis.com/
+dm_inverse_design_watercourse/init_sequence.pickle
+```
+
+Now you should be ready to go! Open `demo_design_optimization.ipynb` inside
+a jupyter notebook and run *from third cell* onwards.
 
 ## Citing this work
 
