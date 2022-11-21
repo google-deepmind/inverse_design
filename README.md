@@ -41,10 +41,8 @@ mv src/ inverse_design/
 
 Download the dataset and model weights from google cloud:
 ```shell
-wget -O ./gns_params.pickle https://storage.googleapis.com/
-dm_inverse_design_watercourse/gns_params.pickle
-wget -O ./init_sequence.pickle https://storage.googleapis.com/
-dm_inverse_design_watercourse/init_sequence.pickle
+wget -O ./gns_params.pickle https://storage.googleapis.com/dm_inverse_design_watercourse/gns_params.pickle
+wget -O ./init_sequence.pickle https://storage.googleapis.com/dm_inverse_design_watercourse/init_sequence.pickle
 ```
 
 Now you should be ready to go! Open `demo_design_optimization.ipynb` inside
