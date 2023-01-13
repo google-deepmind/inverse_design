@@ -1,4 +1,4 @@
-# Copyright 2022 DeepMind Technologies Limited
+# Copyright 2023 DeepMind Technologies Limited
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -135,7 +135,7 @@ def build_initial_graph(input_graphs, max_edges):
     inflow_stack.append(new_particles)
   inflow_stack = np.stack(inflow_stack[1:], axis=0)
   graph.nodes["world_position"] = init_pos
-  graph.nodes["deleted"] = np.zeros(init_pos.shape[0], dtype=np.bool)
+  graph.nodes["deleted"] = np.zeros(init_pos.shape[0], dtype=bool)
 
   # fix stray particles
   stray_particles = init_pos[:, -1, 1] > OOB_AREA
